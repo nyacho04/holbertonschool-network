@@ -1,0 +1,14 @@
+When you type https://www.google.com and hit Enter, many things happen behind the scenes:
+
+Your browser checks its cache or asks a DNS resolver to find the IP address of www.google.com. This involves querying root, TLD, and authoritative DNS servers to get the correct IP.
+With the IP address, a TCP connection is made using a three-way handshake (SYN, SYN-ACK, ACK) over IP. This establishes a reliable path to the server.
+The request passes through firewalls on your device, network, and Google’s servers, ensuring traffic is safe and allowed.
+An encrypted HTTPS connection is set up using SSL/TLS. Your browser verifies Google’s SSL certificate and establishes a secure channel to protect your data.
+Google’s load balancer directs your request to the nearest or least-busy server to improve speed and reliability.
+The web server receives the request, serves static files (if needed), or forwards the request to an application server.
+The application server processes your request, applies business logic, and may interact with other services or a database.
+If needed, the application server queries a database to retrieve or store information related to your request.
+The response travels back through the same path, and your browser renders the page using HTML, CSS, and JavaScript.
+
+Conclusion
+This entire process—from DNS to database—happens in milliseconds and is key to how the modern web works. Understanding it helps you as a software engineer, regardless of your role.
